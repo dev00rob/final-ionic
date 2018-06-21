@@ -8,7 +8,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 })
 export class HomePage {
 
-  robsWords: string;
+  text:string;
 
   constructor(
     public navCtrl: NavController, 
@@ -19,8 +19,8 @@ export class HomePage {
   }
 
   robsText(){
-    this.tts.speak(this.robsWords)
-      .then(() => console.log('Success'))
+    this.tts.speak(this.text)
+      .then(() => {this.text=""; console.log("Success");} )
       .catch((reason: any) => console.log(reason));
   }
 
