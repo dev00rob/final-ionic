@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, IonicPage, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @Component({
@@ -10,7 +10,11 @@ export class HomePage {
 
   robsWords: string;
 
-  constructor(public navCtrl: NavController, private tts: TextToSpeech) {
+  constructor(
+    public navCtrl: NavController, 
+    private tts: TextToSpeech,
+    public navParams: NavParams
+  ) {
 
   }
 
