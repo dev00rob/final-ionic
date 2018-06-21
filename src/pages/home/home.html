@@ -10,6 +10,16 @@
     <ion-label color="primary">Enter text here</ion-label>
     <ion-input placeholder="Text Input" [(ngModel)]="text"></ion-input>
   </ion-item>
-  <button ion-button color="secondary" (click)="robsText()">Secondary</button>
+  <button ion-button color="secondary" (click)="robsText()">Submit</button>
   {{text}}
 </ion-content>
+
+<ion-item>
+  <ion-label>Language</ion-label>
+  <ion-select [(ngModel)]="language">
+    <ion-option value="eng">English</ion-option>
+    <ion-option value="esp">Spanish</ion-option>
+    <ion-option value="ita">Italian</ion-option>
+    <ion-option value="fra">French</ion-option>
+  </ion-select>
+</ion-item>
