@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @Component({
@@ -9,6 +9,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 export class HomePage {
 
   text:string;
+  language: string;
 
   constructor(
     public navCtrl: NavController, 
@@ -18,7 +19,7 @@ export class HomePage {
 
   }
 
-  robsText(){
+  playText(){
     this.tts.speak(this.text)
       .then(() => {this.text=""; console.log("Success");} )
       .catch((reason: any) => console.log(reason));
